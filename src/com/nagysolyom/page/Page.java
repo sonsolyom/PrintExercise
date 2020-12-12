@@ -1,18 +1,21 @@
 package com.nagysolyom.page;
 
-import com.nagysolyom.container.Container;
+import com.nagysolyom.components.Component;
 
 public class Page {
 
-    public void create(){
-
-        Container container = new Container();
+    public void createStart(){
 
         System.out.println("<html>");
         System.out.println("<body>");
-        container.display();
+
+    }
+
+    public void createEnd(){
+
         System.out.println("</body>");
         System.out.println("</html>");
+
     }
 
 }
