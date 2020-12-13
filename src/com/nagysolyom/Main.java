@@ -1,13 +1,13 @@
 
 package com.nagysolyom;
 
-import com.nagysolyom.components.Component;
 import com.nagysolyom.components.container.Container;
 import com.nagysolyom.components.visual.Button;
 import com.nagysolyom.components.visual.Combo;
 import com.nagysolyom.components.visual.Table;
 import com.nagysolyom.page.Engine;
 import com.nagysolyom.page.Page;
+
 
 public class Main {
 
@@ -21,9 +21,11 @@ public class Main {
         Combo combo = new Combo();
 
         page.createStart();
-
-        displayEngine.display(container);
-
+        container.startContainer();
+        displayEngine.display(table);
+        displayEngine.display(button);
+        displayEngine.display(combo);
+        container.endContainer();
         page.createEnd();
 
     }

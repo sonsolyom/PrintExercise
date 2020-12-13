@@ -4,6 +4,9 @@ import com.nagysolyom.components.Component;
 
 public class Page {
 
+    public Page() {
+    }
+
     public void createStart(){
 
         System.out.println("<html>");
