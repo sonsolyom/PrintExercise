@@ -1,12 +1,12 @@
 package com.nagysolyom.page;
 
-import com.nagysolyom.components.Component;
-
 public class Page {
 
+    //Define constructor
     public Page() {
     }
 
+    //Define method to create the beginning of an HTML page
     public void createStart(){
 
         System.out.println("<html>");
@@ -14,6 +14,7 @@ public class Page {
 
     }
 
+    //Define method to create the ending of an HTML page
     public void createEnd(){
 
         System.out.println("</body>");

@@ -4,14 +4,11 @@ import com.nagysolyom.components.Component;
 
 public class Engine {
 
-    //Page page = new Page();
-
+    //Defining method which waiting for a Component type object
     public void display(Component component){
 
-        //page.createStart();
+        //Using the predefined method of the parameter to print the passed argument to the console
         component.printElement();
-        //page.createEnd();
-
 
     }
 
