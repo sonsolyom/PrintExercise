@@ -18,11 +18,11 @@ public class Button extends ButtonData{
     public Button() {
 
         //Asks the user for input and assign it to the variable
-        System.out.print("Please enter the content of the 'will be button': ");
-        String inputButtonData = inputButton.nextLine();
+        //System.out.print("Please enter the content of the 'will be button': ");
+       // String inputButtonData = inputButton.nextLine();
 
         //Call the setter of the extended class and pass the user input to it
-        buttonData.setName(inputButtonData);
+       // buttonData.setName(inputButtonData);
 
         //Call the setter of this class
         setName("<button type=\"button\" style=" + style + ">" + buttonData.getName() + "</button>");

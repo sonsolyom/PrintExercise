@@ -24,7 +24,7 @@ public class Main {
         //calling the object methods to create HTML markup
         page.createStart();
         container.startContainer();
-        displayEngine.display(table1);
+        table1.setTable(3, 2);
         displayEngine.display(button1);
         displayEngine.display(combo);
         container.endContainer();
