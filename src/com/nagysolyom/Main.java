@@ -20,11 +20,13 @@ public class Main {
         Button button1 = new Button();
         Combo combo1 = new Combo();
 
-        //Set the columns and rows of the table
+        //Set the data of the table cells
         table1.setTableData("new cell ");
+        //Set the columns and rows of the table
         table1.setTable(4,1);
-        //Set the number of the combo options
+        //Set the number of the combo options, and its content
         combo1.setCombos(4, "from main");
+        //Set the caption of the button
         button1.setButtonData("me in main");
 
         //Calling the object methods to create HTML markup

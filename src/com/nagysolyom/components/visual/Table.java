@@ -6,20 +6,19 @@ import java.util.ArrayList;
 
 //Define the class which extends another - inherits all its attributes and methods
 public class Table extends Component {
-
     /*
     * //Instantiate the scanner for the HTML table - we would like to have some user input
     * private Scanner inputTable = new Scanner(System.in);
     */
 
-    //Instantiate the extended class - we would like to use its method
-    /**
+    /*
+     * Instantiate the extended class - we would like to use its method
      * tableData is the 'container' of the content in each cell.
-     * */
+     */
     private String tableData;
 
     //Define HTML style for better visualization
-    private String tableStyle = "\"border:1px solid black;\"";
+    private String tableStyle = "\"border=1px solid black;\"";
     private String tableDataStyle = "\"padding:1em; border:1px solid black;\"";
 
 
@@ -31,6 +30,7 @@ public class Table extends Component {
     private ArrayList<String> columns = new ArrayList<String>();
     private ArrayList<String> tableCells = new ArrayList<String>();
 
+    //Instantiate a stringBuilder to be able to print out any String
     StringBuilder stringBuilder = new StringBuilder();
 
 
@@ -44,9 +44,11 @@ public class Table extends Component {
 
     }
 
+    //Private variable setter
     public void setTableData(String tableData){
         this.tableData = tableData;
     }
+    //Private variable getter
     public String getTableData() {
         return tableData;
     }
@@ -96,8 +98,11 @@ public class Table extends Component {
      * Utilize the stringBuilder to easily concatenate the String elements
      */
     public void setRows(Integer rowNums){
-        stringBuilder.append("<table style:" + tableStyle + ">")
-            .append("\n");
+        stringBuilder
+                .append("<table style:")
+                .append(tableStyle)
+                .append(">")
+                .append("\n");
 
         /* The for loop access the passed integer of the parameter
         *       and runs as many times.
@@ -107,15 +112,14 @@ public class Table extends Component {
             stringBuilder.append("<tr>")
                 .append("\n");
             for(String cellsToAppend : columns) {
-                stringBuilder.append(cellsToAppend)
+                stringBuilder
+                        .append(cellsToAppend)
                         .append("\n");
             }
-            stringBuilder.append("</tr>")
-                .append("\n");
+            stringBuilder
+                    .append("</tr>")
+                    .append("\n");
         }
-
         stringBuilder.append("</table>");
     }
-
-
 }

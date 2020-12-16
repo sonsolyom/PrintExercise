@@ -6,14 +6,13 @@ import com.nagysolyom.components.Component;
 
 //Define the class which extends another - inherits all its attributes and methods
 public class Button extends Component {
+    //Instantiate a stringBuilder to be able to print out any String
+    private StringBuilder stringBuilder = new StringBuilder();
 
-    StringBuilder stringBuilder = new StringBuilder();
-
-    //Instantiate the scanner for the HTML table - we would like to have some user input
-    /*private Scanner inputButton = new Scanner(System.in);*/
-
-    //Instantiate the extended class - we would like to use its methods
-    private String buttonData;
+    /*
+    * //Instantiate the scanner for the HTML table - we would like to have some user input
+    * private Scanner inputButton = new Scanner(System.in);
+    */
 
     //Define HTML style for better visualization
     private String style = "\"margin:1em; border-radius:0.5em; background-color:lime;\"";
@@ -28,8 +27,8 @@ public class Button extends Component {
 
     }
 
+    //D
     public void setButtonData(String buttonData){
-        this.buttonData = buttonData;
         stringBuilder
                 .append("<button type=\"button\" style=")
                 .append(style)
