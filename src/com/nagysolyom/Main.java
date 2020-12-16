@@ -9,6 +9,7 @@ import com.nagysolyom.page.Engine;
 import com.nagysolyom.page.Page;
 
 
+
 public class Main {
 
     public static void main(String[] args) {
@@ -19,14 +20,20 @@ public class Main {
         Container container = new Container();
         Table table1 = new Table();
         Button button1 = new Button();
-        Combo combo = new Combo();
+        Combo combo1 = new Combo();
 
-        //calling the object methods to create HTML markup
+        //Set the columns and rows of the table
+        table1.setTable(4,1);
+        //Set the number of the combo options
+        combo1.setCombos(4);
+
+
+        //Calling the object methods to create HTML markup
         page.createStart();
         container.startContainer();
-        table1.setTable(3, 2);
+        displayEngine.display(table1);
         displayEngine.display(button1);
-        displayEngine.display(combo);
+        displayEngine.display(combo1);
         container.endContainer();
         page.createEnd();
 

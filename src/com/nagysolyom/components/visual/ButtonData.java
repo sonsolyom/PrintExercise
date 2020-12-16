@@ -7,6 +7,7 @@ public class ButtonData extends Component {
 
     //Declare constructor
     public ButtonData() {
+        setName("Do NOT Click me! :)");
     }
 
 }
