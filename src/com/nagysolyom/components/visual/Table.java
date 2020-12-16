@@ -1,9 +1,11 @@
 package com.nagysolyom.components.visual;
 
+import com.nagysolyom.components.Component;
+
 import java.util.ArrayList;
 
 //Define the class which extends another - inherits all its attributes and methods
-public class Table extends TableData {
+public class Table extends Component {
 
     /*
     * //Instantiate the scanner for the HTML table - we would like to have some user input
@@ -12,9 +14,9 @@ public class Table extends TableData {
 
     //Instantiate the extended class - we would like to use its method
     /**
-     * {@link TableData} tableData is the 'container' of the content in each cell.
+     * tableData is the 'container' of the content in each cell.
      * */
-    private TableData tableData = new TableData();
+    private String tableData;
 
     //Define HTML style for better visualization
     private String tableStyle = "\"border:1px solid black;\"";
@@ -40,6 +42,13 @@ public class Table extends TableData {
         * String inputTableData = inputTable.nextLine();
         */
 
+    }
+
+    public void setTableData(String tableData){
+        this.tableData = tableData;
+    }
+    public String getTableData() {
+        return tableData;
     }
 
     /*
@@ -72,10 +81,10 @@ public class Table extends TableData {
         * and use a setter to pass data to the pointed instance
         */
         for (counter = 0; counter < colNums; counter++){
-            tableCells.add("cell - " + cellSerial);
-            tableData.setName(tableCells.get(counter));
+            tableCells.add(tableData);
+            setTableData(tableCells.get(counter));
 
-            columns.add("<td style=" + tableDataStyle + ">" + tableData.getName() + "</td>");
+            columns.add("<td style=" + tableDataStyle + ">" + getTableData() + cellSerial + "</td>");
 
             cellSerial++;
         }
