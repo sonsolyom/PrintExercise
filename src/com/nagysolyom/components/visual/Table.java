@@ -36,8 +36,8 @@ public class Table extends Component {
 
     //Define constructor
     public Table() {
-        //Asks the user for input and assign it to the variable
         /*
+        * //Asks the user for input and assign it to the variable
         * System.out.print("Please enter the content of the 'will be table': ");
         * String inputTableData = inputTable.nextLine();
         */

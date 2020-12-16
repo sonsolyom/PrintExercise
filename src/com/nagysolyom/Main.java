@@ -8,8 +8,6 @@ import com.nagysolyom.components.visual.Table;
 import com.nagysolyom.page.Engine;
 import com.nagysolyom.page.Page;
 
-
-
 public class Main {
 
     public static void main(String[] args) {
@@ -26,18 +24,8 @@ public class Main {
         table1.setTableData("new cell ");
         table1.setTable(4,1);
         //Set the number of the combo options
-        combo1.setCombos(4);
-        button1.setButtonData("me in main"); //<---
-        /*
-        * Itt van megint problema.
-        * vlmiert nem latja null erteket is ki.
-        * ha a button classban csianlok egy setter hivast azt latja es hasznalja
-        * ha itt hivom meg akkor a kimenet csak 'null'-t lat, de ha meghivom kulon a getter-t akkor
-        * az itteni erteket irja ki :S
-        */
-
-
-
+        combo1.setCombos(4, "from main");
+        button1.setButtonData("me in main");
 
         //Calling the object methods to create HTML markup
         page.createStart();
