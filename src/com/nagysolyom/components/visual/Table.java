@@ -99,7 +99,7 @@ public class Table extends Component {
      */
     public void setRows(Integer rowNums){
         stringBuilder
-                .append("<table style:")
+                .append("<table style=")
                 .append(tableStyle)
                 .append(">")
                 .append("\n");
